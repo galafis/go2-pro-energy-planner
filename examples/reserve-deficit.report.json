@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "analysisVersion": "0.1.0",
+  "projectId": "go2-pro-energy-planner",
+  "scenarioId": "reserve-deficit",
+  "source": "synthetic",
+  "status": "review-required",
+  "metrics": [
+    {
+      "key": "expectedWh",
+      "label": {
+        "en": "Nominal energy",
+        "pt": "Energia nominal"
+      },
+      "value": 50.5,
+      "unit": "Wh"
+    },
+    {
+      "key": "upperWh",
+      "label": {
+        "en": "Upper estimate",
+        "pt": "Estimativa superior"
+      },
+      "value": 60.6,
+      "unit": "Wh"
+    },
+    {
+      "key": "marginWh",
+      "label": {
+        "en": "Margin after reserve",
+        "pt": "Margem após a reserva"
+      },
+      "value": -33.6,
+      "unit": "Wh"
+    },
+    {
+      "key": "durationMin",
+      "label": {
+        "en": "Mission duration",
+        "pt": "Duração da missão"
+      },
+      "value": 34,
+      "unit": "min"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "error",
+      "code": "RESERVE_DEFICIT",
+      "message": {
+        "en": "The upper energy estimate consumes the requested reserve.",
+        "pt": "A estimativa superior de energia consome a reserva solicitada."
+      },
+      "deficitWh": 33.6
+    }
+  ],
+  "records": [
+    {
+      "id": "outbound",
+      "phase": "outbound",
+      "durationS": 120,
+      "distanceM": 60,
+      "energyWh": 6.5,
+      "lowWh": 5.2,
+      "highWh": 7.8,
+      "cumulativeWh": 6.5,
+      "remainingNominalWh": 65.5,
+      "remainingWorstWh": 64.2,
+      "reserveBreached": false
+    },
+    {
+      "id": "observation",
+      "phase": "task",
+      "durationS": 1800,
+      "distanceM": 0,
+      "energyWh": 37.5,
+      "lowWh": 30,
+      "highWh": 45,
+      "cumulativeWh": 44,
+      "remainingNominalWh": 28,
+      "remainingWorstWh": 19.2,
+      "reserveBreached": true
+    },
+    {
+      "id": "return",
+      "phase": "return",
+      "durationS": 120,
+      "distanceM": 60,
+      "energyWh": 6.5,
+      "lowWh": 5.2,
+      "highWh": 7.8,
+      "cumulativeWh": 50.5,
+      "remainingNominalWh": 21.5,
+      "remainingWorstWh": 11.4,
+      "reserveBreached": true
+    }
+  ],
+  "availableWh": 72,
+  "reserveWh": 45,
+  "effectiveCapacityWh": 180,
+  "nominalWh": 50.5,
+  "lowWh": 40.4,
+  "highWh": 60.6,
+  "marginWh": -33.6,
+  "returnHighWh": 7.8,
+  "taskBudgetWh": 19.2,
+  "totalDurationS": 2040,
+  "totalDistanceM": 120,
+  "feasibleWithinAssumptions": false
+}

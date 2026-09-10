@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "analysisVersion": "0.1.0",
+  "projectId": "go2-pro-energy-planner",
+  "scenarioId": "corridor-mission",
+  "source": "synthetic",
+  "status": "complete",
+  "metrics": [
+    {
+      "key": "expectedWh",
+      "label": {
+        "en": "Nominal energy",
+        "pt": "Energia nominal"
+      },
+      "value": 25.5,
+      "unit": "Wh"
+    },
+    {
+      "key": "upperWh",
+      "label": {
+        "en": "Upper estimate",
+        "pt": "Estimativa superior"
+      },
+      "value": 30.6,
+      "unit": "Wh"
+    },
+    {
+      "key": "marginWh",
+      "label": {
+        "en": "Margin after reserve",
+        "pt": "Margem após a reserva"
+      },
+      "value": 68.4,
+      "unit": "Wh"
+    },
+    {
+      "key": "durationMin",
+      "label": {
+        "en": "Mission duration",
+        "pt": "Duração da missão"
+      },
+      "value": 14,
+      "unit": "min"
+    }
+  ],
+  "findings": [],
+  "records": [
+    {
+      "id": "outbound",
+      "phase": "outbound",
+      "durationS": 120,
+      "distanceM": 60,
+      "energyWh": 6.5,
+      "lowWh": 5.2,
+      "highWh": 7.8,
+      "cumulativeWh": 6.5,
+      "remainingNominalWh": 137.5,
+      "remainingWorstWh": 136.2,
+      "reserveBreached": false
+    },
+    {
+      "id": "observation",
+      "phase": "task",
+      "durationS": 600,
+      "distanceM": 0,
+      "energyWh": 12.5,
+      "lowWh": 10,
+      "highWh": 15,
+      "cumulativeWh": 19,
+      "remainingNominalWh": 125,
+      "remainingWorstWh": 121.2,
+      "reserveBreached": false
+    },
+    {
+      "id": "return",
+      "phase": "return",
+      "durationS": 120,
+      "distanceM": 60,
+      "energyWh": 6.5,
+      "lowWh": 5.2,
+      "highWh": 7.8,
+      "cumulativeWh": 25.5,
+      "remainingNominalWh": 118.5,
+      "remainingWorstWh": 113.4,
+      "reserveBreached": false
+    }
+  ],
+  "availableWh": 144,
+  "reserveWh": 45,
+  "effectiveCapacityWh": 180,
+  "nominalWh": 25.5,
+  "lowWh": 20.4,
+  "highWh": 30.6,
+  "marginWh": 68.4,
+  "returnHighWh": 7.8,
+  "taskBudgetWh": 91.2,
+  "totalDurationS": 840,
+  "totalDistanceM": 120,
+  "feasibleWithinAssumptions": true
+}

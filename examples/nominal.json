@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "corridor-mission",
+  "source": "synthetic",
+  "capacityWh": 200,
+  "capacityFactor": 0.9,
+  "stateOfChargePct": 80,
+  "reservePct": 25,
+  "uncertaintyPct": 20,
+  "segments": [
+    {
+      "id": "outbound",
+      "phase": "outbound",
+      "distanceM": 60,
+      "speedMps": 0.5,
+      "dwellS": 0,
+      "motionW": 180,
+      "idleW": 60,
+      "auxW": 15
+    },
+    {
+      "id": "observation",
+      "phase": "task",
+      "distanceM": 0,
+      "speedMps": 0.5,
+      "dwellS": 600,
+      "motionW": 180,
+      "idleW": 60,
+      "auxW": 15
+    },
+    {
+      "id": "return",
+      "phase": "return",
+      "distanceM": 60,
+      "speedMps": 0.5,
+      "dwellS": 0,
+      "motionW": 180,
+      "idleW": 60,
+      "auxW": 15
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "file": "nominal.json",
+    "label": {
+      "en": "Corridor mission",
+      "pt": "Missão em corredor"
+    },
+    "expectedStatus": "complete",
+    "report": "nominal.report.json"
+  },
+  {
+    "file": "reserve-deficit.json",
+    "label": {
+      "en": "Insufficient reserve",
+      "pt": "Reserva insuficiente"
+    },
+    "expectedStatus": "review-required",
+    "report": "reserve-deficit.report.json"
+  },
+  {
+    "file": "auxiliary-load.json",
+    "label": {
+      "en": "Auxiliary load",
+      "pt": "Carga auxiliar"
+    },
+    "expectedStatus": "complete",
+    "report": "auxiliary-load.report.json"
+  }
+]
