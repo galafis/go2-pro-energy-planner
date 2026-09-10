@@ -60,3 +60,15 @@ O navegador lê as importações localmente, limita-as a 1 MB, escapa textos inf
 | `scripts/analyze.mjs` | Command-line adapter · Adaptador de linha de comando                                    |
 | `tests/`              | Behavioral and contract checks · Verificações de comportamento e contrato               |
 | `examples/`           | Synthetic inputs and expected reports · Entradas sintéticas e relatórios esperados      |
+
+## Domain decision flow · Fluxo de decisões do domínio
+
+```mermaid
+flowchart LR
+  A["Capacity and starting charge / Capacidade e carga inicial"] --> B["Available energy / Energia disponível"]
+  C["Motion, idle and auxiliary loads / Movimento, espera e cargas auxiliares"] --> D["Segment consumption bounds / Limites de consumo por segmento"]
+  B --> E["Remaining energy / Energia restante"]
+  D --> E
+  E --> F["Return and reserve review / Revisão de retorno e reserva"]
+  F --> G["Preserve deficits / Preservar déficits"]
+```

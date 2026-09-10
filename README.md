@@ -7,6 +7,22 @@
 
 [English](#english) · [Português](#portugues) · [Live workbench · Demonstração](https://galafis.github.io/go2-pro-energy-planner/) · [Examples · Exemplos](#examples)
 
+<!-- domain-workflow:start -->
+
+## Domain workflow · Fluxo do domínio
+
+```mermaid
+flowchart LR
+  A["Capacity and starting charge / Capacidade e carga inicial"] --> B["Available energy / Energia disponível"]
+  C["Motion, idle and auxiliary loads / Movimento, espera e cargas auxiliares"] --> D["Segment consumption bounds / Limites de consumo por segmento"]
+  B --> E["Remaining energy / Energia restante"]
+  D --> E
+  E --> F["Return and reserve review / Revisão de retorno e reserva"]
+  F --> G["Preserve deficits / Preservar déficits"]
+```
+
+<!-- domain-workflow:end -->
+
 <a id="english"></a>
 
 ## English
@@ -178,3 +194,5 @@ Projeto público relacionado: [rescue-scenario-lab](https://github.com/galafis/r
 
 Independent work; institutional contact does not imply institutional or vendor endorsement.  
 Trabalho independente; o contato institucional não implica endosso de instituição ou fabricante.
+
+[Worked examples with expected metrics · Exemplos comentados com métricas esperadas](docs/EXPERIMENTS.md)
