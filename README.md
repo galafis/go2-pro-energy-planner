@@ -3,7 +3,7 @@
 **Make mission energy assumptions and return reserves visible.**  
 **Torne visíveis as hipóteses de energia e a reserva para retorno.**
 
-[![Checks](https://github.com/galafis/go2-pro-energy-planner/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/go2-pro-energy-planner/actions/workflows/ci.yml) · **v0.1.0** · **28 automated tests / testes automatizados** · **MIT**
+[![Checks](https://github.com/galafis/go2-pro-energy-planner/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/go2-pro-energy-planner/actions/workflows/ci.yml) · **v0.1.0** · **28 browser tests / testes do navegador** · **MIT**
 
 [English](#english) · [Português](#portugues) · [Live workbench · Demonstração](https://galafis.github.io/go2-pro-energy-planner/) · [Examples · Exemplos](#examples)
 

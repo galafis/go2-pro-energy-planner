@@ -1,0 +1,40 @@
+{
+  "scenarioId": "corridor-mission",
+  "source": "synthetic",
+  "records": [
+    {
+      "id": "outbound",
+      "phase": "outbound",
+      "durationS": 120.0,
+      "energyWh": 6.5,
+      "cumulativeWh": 6.5,
+      "remainingUpperWh": 136.2
+    },
+    {
+      "id": "observation",
+      "phase": "task",
+      "durationS": 600.0,
+      "energyWh": 12.5,
+      "cumulativeWh": 19.0,
+      "remainingUpperWh": 121.2
+    },
+    {
+      "id": "return",
+      "phase": "return",
+      "durationS": 120.0,
+      "energyWh": 6.5,
+      "cumulativeWh": 25.5,
+      "remainingUpperWh": 113.4
+    }
+  ],
+  "effectiveCapacityWh": 180.0,
+  "availableWh": 144.0,
+  "reserveWh": 45.0,
+  "nominalWh": 25.5,
+  "lowerWh": 20.4,
+  "upperWh": 30.6,
+  "marginWh": 68.4,
+  "durationS": 840.0,
+  "feasible": true,
+  "initialBelowReserve": false
+}

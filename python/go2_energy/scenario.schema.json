@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://galafis.github.io/go2-pro-energy-planner/schemas/scenario.schema.json",
+  "title": "go2-pro-energy-planner scenario / cenário",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "scenarioId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+    },
+    "source": {
+      "enum": ["synthetic", "manual"]
+    },
+    "capacityWh": {
+      "type": "number",
+      "minimum": 0.01,
+      "maximum": 100000
+    },
+    "capacityFactor": {
+      "type": "number",
+      "minimum": 0.01,
+      "maximum": 1
+    },
+    "stateOfChargePct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "reservePct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "uncertaintyPct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+          },
+          "phase": {
+            "enum": ["outbound", "task", "return"]
+          },
+          "distanceM": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100000
+          },
+          "speedMps": {
+            "type": "number",
+            "minimum": 0.01,
+            "maximum": 10
+          },
+          "dwellS": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 86400
+          },
+          "motionW": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10000
+          },
+          "idleW": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10000
+          },
+          "auxW": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10000
+          }
+        },
+        "required": ["id", "phase", "distanceM", "speedMps", "dwellS", "motionW", "idleW", "auxW"]
+      },
+      "minItems": 1,
+      "maxItems": 1000
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "scenarioId",
+    "source",
+    "capacityWh",
+    "capacityFactor",
+    "stateOfChargePct",
+    "reservePct",
+    "uncertaintyPct",
+    "segments"
+  ]
+}
